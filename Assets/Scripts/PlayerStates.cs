@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// Committing Class STUB
 public interface InputReciever
 {
     public void GetInput();
