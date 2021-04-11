@@ -11,18 +11,39 @@ public class StateBase : InputReciever
 {
     public void GetInput(){
         // Handle Input
+        float horz = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
+
+        if (horz != 0){
+            InputHorizontal(horz);
+        }
+        if (vert != 0){
+            InputVertical(vert);
+        }
+        if (Input.GetButton("Jump")){
+            InputJump();
+        }
+        if (Input.GetButton("Fire1")){
+            InputShoot();
+        }
+        if (Input.GetButton("Fire2")){
+            InputDash();
+        }
     }
 
-    protected virtual void InputHorizontal(bool isRight){
+    protected virtual void InputHorizontal(float dir){
         
     }
-    protected virtual void InputVertical(bool isUp){
+    protected virtual void InputVertical(float dir){
         
     }
-    protected virtual void InputActionA(){
+    protected virtual void InputJump(){
         
     }
-    protected virtual void InputActionB(){
+    protected virtual void InputShoot(){
+        
+    }
+    protected virtual void InputDash(){
         
     }
 }
